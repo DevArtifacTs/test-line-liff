@@ -15,20 +15,13 @@ function App() {
 		window.location.reload();
 	};
 
-	const initLine = () => {
-		liff.init(
-			{ liffId: "1656508316-k7jNojXm" },
-			() => {
-				if (liff.isLoggedIn()) {
-					runApp();
-				} else {
-					liff.login({
-						// redirectUri: "https://test-line-liff-cgxu.vercel.app/",
-					});
-				}
-			},
-			(err) => console.error(err)
-		);
+	const initLine = async () => {
+		await liff.init({ liffId: "1656508316-k7jNojXm" })
+    if( liff.isLoggedIn()){
+      runApp()
+    } else {
+      liff.login();
+    }
 	};
 
 	const runApp = () => {
