@@ -23,7 +23,7 @@ function App() {
 					runApp();
 				} else {
 					liff.login({
-						redirectUri: "https://test-line-liff-cgxu.vercel.app/",
+						// redirectUri: "https://test-line-liff-cgxu.vercel.app/",
 					});
 				}
 			},
