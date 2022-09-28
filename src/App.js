@@ -22,7 +22,9 @@ function App() {
 				if (liff.isLoggedIn()) {
 					runApp();
 				} else {
-					liff.login();
+					liff.login({
+						redirectUri: "https://test-line-liff-cgxu.vercel.app/",
+					});
 				}
 			},
 			(err) => console.error(err)
